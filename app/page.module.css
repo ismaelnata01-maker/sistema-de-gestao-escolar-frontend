@@ -1,0 +1,16 @@
+.title{
+  font-size: var(--text-h1);
+}
+.input{
+  font-size: var(--text-caption);
+}
+.caption{
+  font-size: var(--text-caption);
+}
+.asterisco{
+  color: #ff0000;
+}
+.line{
+  display: flex;
+  flex-direction: row;
+}
