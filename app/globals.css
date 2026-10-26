@@ -24,13 +24,13 @@
  --font-caption: var(--font-jost);
 
  /*tamanhos de texto*/
- --text-h1: 50 px;
- --text-h2: 43 px;
- --text-h3: 38 px;
- --text-body: 29 px;
- --text-label: 27 px;
- --text-caption: 16 px;
- --text-data: 40 px;
+ --text-h1: 50px;
+ --text-h2: 43px;
+ --text-h3: 38px;
+ --text-body: 29px;
+ --text-label: 21px;
+ --text-caption: 16px;
+ --text-data: 40px;
 
 /*peso das fontes*/
  --font-weight-h1: 400;
