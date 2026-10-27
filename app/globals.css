@@ -51,11 +51,16 @@
  --spacing-3x1: 48px;
 
 /*raios*/
- --radius-sm: 4;
- --radius-md: 12;
- --radius-lg: 16;
+ --radius-sm: 4px;
+ --radius-md: 12px;
+ --radius-lg: 16px;
 
 /*Breakpoints*/
  --breakpoints-tablet: 640px;
  --breakpoints-desktop: 1024px;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
 }

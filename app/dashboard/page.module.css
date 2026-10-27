@@ -1,0 +1,17 @@
+.tudo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-background);
+  width: 100vw;
+}
+
+.header{
+    background-color: var(--color-primary);
+    justify-content: center;
+    width: 100%;
+}
+
+.title {
+    text-align: center;
+}

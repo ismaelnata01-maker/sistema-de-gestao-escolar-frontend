@@ -89,12 +89,7 @@ input::placeholder {
 .asterisco{
   color: var(--color-error);
 }
-.button{
-  width: 180;
-  height: 50;
-  font-size: var(--text-main);
-  border-radius: 12;
-}
+
 .line{
   display: flex;
   flex-direction: row;

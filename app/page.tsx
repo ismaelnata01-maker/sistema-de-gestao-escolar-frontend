@@ -1,3 +1,4 @@
+import Button from "@/components/Button";
 import styles from "./page.module.css";
 
 export default function Login(){
@@ -24,7 +25,7 @@ export default function Login(){
         <p className={styles.caption}>Mínimo 8 caracteres</p>
       </div>
 
-      <button className={styles.button}>Entrar</button>
+      <Button variant="primary">Entrar</Button>
 
     </div>
   )
