@@ -1,0 +1,36 @@
+.Sidebar {
+    position: fixed;
+    background-color: var(--color-surface);
+    color: var(--color-surface);
+    width: max-content;
+    min-width: 60px;
+    height: 1000;
+    z-index: 9999;
+}
+.Sidebar > button:first-child {
+  display: block;
+  margin: 10 auto;
+  margin-top: 40px;
+}
+.button_open{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
+    white-space: normal;
+    padding: 10px;
+    white-space: nowrap;
+    gap: 40px;
+}
+.button_close{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
+    white-space: normal;
+    padding: 10px;
+    white-space: nowrap;
+    gap: 40px;
+}
