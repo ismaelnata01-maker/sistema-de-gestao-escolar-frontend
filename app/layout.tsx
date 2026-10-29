@@ -1,14 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Jacquard_24, Jaini_Purva, Jost } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const jacquard24 = Jacquard_24({
+  variable: "--font-jacquard-24",
   subsets: ["latin"],
+  weight: ["400"]
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jainiPurva = Jaini_Purva({
+  variable: "--font-jaini-purva",
+  subsets: ["latin"],
+  weight: ["400"]
+});
+
+const jost = Jost({
+  variable: "--font-jost",
   subsets: ["latin"],
 });
 
@@ -19,7 +26,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" className={`${jacquard24.variable} ${jainiPurva.variable} ${jost.variable}`}>
       <body>{children}</body>
     </html>
   );
