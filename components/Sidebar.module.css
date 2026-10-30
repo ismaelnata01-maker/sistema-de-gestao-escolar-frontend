@@ -34,3 +34,27 @@
     white-space: nowrap;
     gap: 40px;
 }
+
+.house{
+    color: var(--color-text);
+}
+
+.glass {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 999;
+    
+    background: rgba(220, 220, 220, 0.92);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+
+  box-shadow: 
+    inset 1px 1px 2px rgba(255, 255, 255, 0.3),
+    0 4px 15px rgba(0, 0, 0, 0.15);
+
+  transition: all 0.3s ease;
+}
