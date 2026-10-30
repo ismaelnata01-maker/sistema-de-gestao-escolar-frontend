@@ -36,7 +36,17 @@
 }
 
 .house{
-    color: var(--color-text);
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    padding-top: var(--spacing-sm);
+    padding-bottom: var(--spacing-sm);
+    padding-right: var(--spacing-lg);
+    padding-left: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    font-size: var(--text-body);
+    font-weight: var(--font-weight-body);
+    font-family: var(--font-main);
+
 }
 
 .glass {

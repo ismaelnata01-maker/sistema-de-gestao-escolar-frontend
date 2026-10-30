@@ -5,8 +5,8 @@ interface Props extends ComponentProps<"button"> {
     variant?: "primary" | "secondary" | "danger" | "ghost"
 }
 
-export default function Button({variant= "primary", ...props} : Props){
+export default function Button({variant="primary", className, ...props} : Props){
     return (
-        <button {...props} className={`${styles.button} ${styles[variant]}`}/>
+        <button {...props} className={`${styles.button} ${styles[variant]} ${className}`}/>
     )
 }
