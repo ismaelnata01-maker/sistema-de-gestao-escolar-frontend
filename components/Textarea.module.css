@@ -1,0 +1,22 @@
+.informacoes{
+  background-color: var(--color-primary-strong);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+}
+.descricao{
+  color: var(--color-background);
+}
+.asterisco{
+  color: var(--color-error);
+}
+.doisPontos{
+  color: var(--color-background);
+}
+.line{
+  display: flex;
+  flex-direction: row;
+}

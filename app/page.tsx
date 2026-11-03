@@ -2,6 +2,7 @@ import Button from "@/components/Button";
 import styles from "./page.module.css";
 
 import { login } from "./actions"; 
+import Input from "@/components/Input";
 
 export default function Login(){
   return(
@@ -10,13 +11,9 @@ export default function Login(){
         <h1>Login</h1>
       </div>
       
-      <div>
-        <div className={styles.line}>
-          <h3 className={styles.text}>Email </h3>
-          <h3 className={`${styles.asterisco} ${styles.text}`}>*</h3>
-        </div>
-        <input name="email" type="text" className={styles.input} placeholder="Digite seu email"/>
-      </div>
+        
+
+      <Input label="Email" name="email" type="email" placeholder="Digite seu email" labelClassName={styles.labelColor} />
 
       <div>
         <div className={styles.line}>

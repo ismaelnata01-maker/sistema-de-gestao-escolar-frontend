@@ -10,7 +10,7 @@ export async function proxy(request: NextRequest){
     }
 
     try{
-        jwtVerify(token, new TextEncoder().encode(process.env.JWT_SECRET));
+        await jwtVerify(token, new TextEncoder().encode(process.env.JWT_SECRET));
         return NextResponse.next();
     } catch (e) {
         console.error(e);

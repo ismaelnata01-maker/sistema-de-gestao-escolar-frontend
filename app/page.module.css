@@ -49,6 +49,9 @@ input::placeholder {
   display: flex;
   flex-direction: row;
 }
+.labelColor{
+  color: var(--color-text);
+}
 
 
 
