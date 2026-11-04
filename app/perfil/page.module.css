@@ -25,4 +25,10 @@
   height: 50px;
   margin-top: 20px;
   font-size: var(--text-label);
+  text-align: center;
+}
+.informacoes{
+  background-color: var(--color-text);
+  padding: 10px;
+  border-radius: 5px;
 }

@@ -13,7 +13,7 @@ export default function Login(){
       
         
 
-      <Input label="Email" name="email" type="email" placeholder="Digite seu email" labelClassName={styles.labelColor} />
+      <Input label="Email" name="email" type="email" placeholder="Digite seu email" required={true} variant="dark"/>
 
       <div>
         <div className={styles.line}>

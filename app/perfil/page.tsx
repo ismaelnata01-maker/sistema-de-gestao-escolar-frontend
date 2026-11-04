@@ -1,80 +1,35 @@
 import Sidebar from "@/components/Sidebar";
 import styles from "./page.module.css";
 import Button from "@/components/Button";
+import  { getFuncionarioData, editFuncionarioData } from "./actions";
+import Input from "@/components/Input";
 
-export default function Perfil() {
+export default async function Perfil() {
+
+  const funcionario = await getFuncionarioData();
+
+  const editAction = editFuncionarioData.bind(null, funcionario.id);
+
   return (
-    <div className={styles.tudo}>
+    <form action={editAction} className={styles.tudo}>
       <header className={styles.header}>
         <Sidebar />
         <h1 className={styles.title}>Perfil</h1>
       </header>
 
       <div className={styles.informacoes}>
-        <div className={styles.line}>
-          <div className={styles.descricao}>Cargo</div>
-          <div className={styles.asterisco}>*</div>
-          <div className={styles.doisPontos}>:</div>
-        </div>
-        <input className={styles.input} type="text" value={""} />
-
-
-        <div className={styles.line}>
-          <div className={styles.descricao}>CPF</div>
-          <div className={styles.asterisco}>*</div>
-          <div className={styles.doisPontos}>:</div>
-        </div>
-
-        <input className={styles.input} type="text" value={""} />
-
-
-        <div className={styles.line}>
-          <div className={styles.descricao}>Nome</div>
-          <div className={styles.doisPontos}>:</div>
-        </div>
-
-        <input className={styles.input} type="text" value={""} />
-
-        <div className={styles.line}>
-          <div className={styles.descricao}>Data de nascimento</div>
-          <div className={styles.doisPontos}>:</div>
-        </div>
-        <input className={styles.input} type="text" value={""} />
-
-        <div className={styles.line}>
-          <div className={styles.descricao}>Email</div>
-          <div className={styles.asterisco}>*</div>
-          <div className={styles.doisPontos}>:</div>
-        </div>
-
-        <input className={styles.input} type="text" value={""} />
-
-        <div className={styles.line}>
-          <div className={styles.descricao}>Telefone</div>
-          <div className={styles.doisPontos}>:</div>
-        </div>
-
-        <input className={styles.input} type="text" value={""} />
-
-
-        <div className={styles.line}>
-          <div className={styles.descricao}>Endereço</div>
-          <div className={styles.doisPontos}>:</div>
-        </div>
-
-        <input className={styles.input} type="text" value={""} />
-
-        <div className={styles.line}>
-          <div className={styles.descricao}>Senha</div>
-          <div className={styles.asterisco}>*</div>
-          <div className={styles.doisPontos}>:</div>
-        </div>
-
-        <input className={styles.input} type="password" value={""} />
+        <Input label="Cargo" type="text" required defaultValue={funcionario.cargo} name="cargo"/>
+        <Input label="cpf" type="text" required defaultValue={funcionario.cpf} name="cpf"/>
+        <Input label="nome" type="text" defaultValue={funcionario.nome} name="nome"/>
+        <Input label="nascimento" type="text" defaultValue={funcionario.nascimento} name="nascimento"/>
+        <Input label="email" type="email" required defaultValue={funcionario.email} name="email"/>
+        <Input label="telefone" type="text" defaultValue={funcionario.telefone} name="telefone"/>
+        <Input label="endereço" type="text" defaultValue={funcionario.endereco} name="endereco"/>
+        <Input label="senha" type="password" required defaultValue={funcionario.senha} name="senha"/>
       </div>
 
-      <Button className={styles.button} variant="primary">Entrar</Button>
+      <Button className={styles.button} variant="primary" type="submit">Salvar alterações</Button>
 
-    </div>
+    </form>
   )
 }
