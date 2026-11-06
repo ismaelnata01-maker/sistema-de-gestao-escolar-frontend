@@ -7,42 +7,17 @@
   height: 90vh;
   width: 90vw;
   font-family: var(--font-main);
+
 }
 .title{
-  font-size: var(--text-h1);
+  font-size: var(--text-h3);
   font-weight: var(--font-weight-h1);
 }
-.input {
-  width: 170px;
-  height: 30px;
-  font-size: var(--text-main);
-  background-color: var(--color-surface);
-  border-radius: 5px;
-  border: 1px solid transparent;
-  outline: none;
-}
 
-.input:focus {
-  border: 1px solid black;
-}
-input::placeholder {
-  color: var(--color-primary-strong);
-}
-.caption{
-  font-size: var(--text-caption);
-  margin-top: 10;
-  padding: 0;
-}
-.text{
-  font-size: var(--text-label);
-}
-.asterisco{
-  color: var(--color-error);
-}
 .button{
-  width: 140;
-  height: 40;
-  font-size: var(--text-main);
+  width: 90;
+  height: 50;
+  font-size: var(--text-label);
   border-radius: 12;
 }
 .line{
@@ -52,7 +27,11 @@ input::placeholder {
 .labelColor{
   color: var(--color-text);
 }
-
+.inputs{
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
 
 
 
@@ -65,38 +44,38 @@ input::placeholder {
 
 @media (min-width: 640px) {
   .title{
-  font-size: var(--text-h1);
-}
-.input {
-  width: 220px;
-  height: 40px;
-  font-size: var(--text-main);
-  background-color: var(--color-surface);
-  border-radius: 5px;
-  border: 1px solid transparent;
-  outline: none;
-}
+    font-size: var(--text-h2);
+  }
+  .input {
+    width: 220px;
+    height: 40px;
+    font-size: var(--text-main);
+    background-color: var(--color-surface);
+    border-radius: 5px;
+    border: 1px solid transparent;
+    outline: none;
+  }
 
-.input:focus {
-  border: 3px solid black;
-}
-input::placeholder {
-  color: var(--color-primary-strong);
-}
-.caption{
-  font-size: var(--text-caption);
-  margin-top: 10;
-  padding: 0;
-}
-.text{
-  font-size: var(--text-label);
-}
-.asterisco{
-  color: var(--color-error);
-}
+  .input:focus {
+    border: 3px solid black;
+  }
+  input::placeholder {
+    color: var(--color-primary-strong);
+  }
+  .caption{
+    font-size: var(--text-caption);
+    margin-top: 10;
+    padding: 0;
+  }
+  .text{
+    font-size: var(--text-label);
+  }
+  .asterisco{
+    color: var(--color-error);
+  }
 
-.line{
-  display: flex;
-  flex-direction: row;
-}
+  .line{
+    display: flex;
+    flex-direction: row;
+  }
 }

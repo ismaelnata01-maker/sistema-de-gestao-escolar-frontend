@@ -58,13 +58,13 @@ export async function editFuncionarioData( id: number, formData: FormData) {
     if(!token){
         return "Erro: Token não encontrado";
     }
-    
+
     let response: Response;
     try{
         response = await fetch(`${process.env.API_URL}/funcionarios/${id}`, {
             method: "PUT",
             headers: {
-                "Content-Type": "applacation/json",
+                "Content-Type": "application/json",
                 Authorization: `Bearer ${token}`,
             },
             body: JSON.stringify({
@@ -89,7 +89,7 @@ export async function editFuncionarioData( id: number, formData: FormData) {
 
     if(response.status === 200){
         revalidateTag("pegarDadosFuncionarios", "max");
-        return;
+        redirect("/perfil");
     }
 
     const data = await response.json();

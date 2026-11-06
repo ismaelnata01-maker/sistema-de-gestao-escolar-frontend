@@ -1,22 +1,51 @@
 "use client";
 
-import { House } from 'lucide-react';
-import { useState } from "react";
-import styles from "./Sidebar.module.css"
-import Button from './Button';
+import { House } from "lucide-react";
+import { useState, useEffect } from "react";
+import styles from "./Sidebar.module.css";
+import Button from "./Button";
 
 export default function Sidebar() {
   const [aberto, setAberto] = useState(false);
 
+  // Bloqueia a rolagem enquanto a Sidebar estiver aberta
+  useEffect(() => {
+    if (aberto) {
+      const scrollAnterior = document.body.style.overflow;
+
+      document.body.style.overflow = "hidden";
+
+      return () => {
+        document.body.style.overflow = scrollAnterior;
+      };
+    }
+  }, [aberto]);
+
   return (
-    <div>
+    <>
+      {/* Efeito Glass */}
+      {aberto && (
+        <button
+          type="button"
+          className={styles.glass}
+          onClick={() => setAberto(false)}
+          aria-label="Fechar menu"
+        />
+      )}
+
+      {/* Barra lateral */}
       <aside className={styles.Sidebar}>
-        <Button onClick={() => setAberto(oldState => !oldState)}>
+        <Button
+          type="button"
+          onClick={() => setAberto((oldState) => !oldState)}
+        >
           {aberto ? "✕" : "☰"}
         </Button>
 
         <div className={styles.button_open}>
-         <button className={styles.house}><House/></button>
+          <button type="button" className={styles.house}>
+            <House />
+          </button>
         </div>
 
         {aberto ? (
@@ -33,8 +62,6 @@ export default function Sidebar() {
           </div>
         )}
       </aside>
-
-      {aberto && <button className={styles.glass} onClick={() => setAberto(oldState => !oldState)}></button>}
-    </div>
-  )
+    </>
+  );
 }

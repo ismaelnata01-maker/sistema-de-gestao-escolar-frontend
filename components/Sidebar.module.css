@@ -4,7 +4,8 @@
     color: var(--color-surface);
     width: max-content;
     min-width: 60px;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     z-index: 9999;
 }
 .Sidebar > button:first-child {
@@ -52,7 +53,8 @@
 .glass {
     width: 100vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
+    inset: 0;
     z-index: 999;
     
     background: rgba(220, 220, 220, 0.92);
@@ -67,4 +69,5 @@
     0 4px 15px rgba(0, 0, 0, 0.15);
 
   transition: all 0.3s ease;
+  cursor: default;
 }
