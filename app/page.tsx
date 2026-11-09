@@ -15,7 +15,7 @@ export default function Login(){
       </div>
       
 
-      <Button variant="primary" className={styles.button}>Entrar</Button>
+      <Button type="submit" variant="primary" className={styles.button}>Entrar</Button>
 
     </form>
   )

@@ -42,7 +42,7 @@ export default function Sidebar() {
           {aberto ? "✕" : "☰"}
         </Button>
 
-        <div className={styles.button_open}>
+        <div className={styles.button_close}>
           <button type="button" className={styles.house}>
             <House />
           </button>

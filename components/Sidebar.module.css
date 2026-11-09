@@ -7,12 +7,18 @@
     min-height: 100vh;
     height: 100%;
     z-index: 9999;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-sm);
+    align-items: center;
 }
+
 .Sidebar > button:first-child {
-  display: block;
-  margin: 10 auto;
-  margin-top: 40px;
+  margin-top: 15px;
+  margin-bottom: 60px;
 }
+
 .button_open{
     display: flex;
     flex-direction: column;
@@ -27,7 +33,7 @@
 .button_close{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: fit-content;
     box-sizing: border-box;
     overflow-wrap: anywhere;
     white-space: normal;

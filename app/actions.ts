@@ -10,6 +10,7 @@ export async function login(formData: FormData){
     let response: Response;
 
     try{
+        console.log("s")
         response = await fetch(`${process.env.API_URL}/login`, {
             method: "POST",
             headers:{
