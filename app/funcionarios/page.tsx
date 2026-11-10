@@ -1,15 +1,19 @@
 import Sidebar from "@/components/Sidebar";
 import styles from "./page.module.css";
 import Button from "@/components/Button";
+import { getAlunoLista } from "./actions";
 
-export default async function ListaAlunos() {
+export default async function Funcionarios() {
+
+  const funcionarios = await getAlunoLista();
+  console.log(funcionarios);
 
   return (
     <>
       <Sidebar />
       <form className={styles.tudo}>
         <header className={styles.header}>
-          <h1 className={styles.title}>Lista de Alunos</h1>
+          <h1 className={styles.title}>Lista de Funcionarios</h1>
         </header>
 
         <div className={styles.informacoes}>
