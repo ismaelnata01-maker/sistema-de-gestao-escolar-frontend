@@ -1,11 +1,11 @@
 import Sidebar from "@/components/Sidebar";
 import styles from "./page.module.css";
 import Button from "@/components/Button";
-import { getAlunoLista } from "./actions";
+import { getFuncionarioLista } from "./actions";
 
 export default async function Funcionarios() {
 
-  const funcionarios = await getAlunoLista();
+  const funcionarios = await getFuncionarioLista();
   console.log(funcionarios);
 
   return (

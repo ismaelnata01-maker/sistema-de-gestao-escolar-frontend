@@ -2,7 +2,7 @@
 
 import { cookies } from "next/headers";
 
-export async function getAlunoLista() {
+export async function getFuncionarioLista() {
     const cookieStore = await cookies();
     const token = cookieStore.get("@gestao-escolar/token")?.value;
 
@@ -14,12 +14,12 @@ export async function getAlunoLista() {
     let response: Response;
 
     try{
-        response = await fetch(`${process.env.API_URL}/alunos`,{
+        response = await fetch(`${process.env.API_URL}/funcionarios`,{
             method: "GET",
             headers: {
                 Authorization: `Bearer ${token}`
             },
-            next: { tags: ["pegarListaAlunos"] }
+            next: { tags: ["pegarListaFuncionarios"] }
         })
     } catch(e){
         console.error(e);
